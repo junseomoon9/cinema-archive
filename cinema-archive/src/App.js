@@ -5,15 +5,16 @@ import {Movies} from './components/Movies'
 import {TVshows} from './components/TVshows'
 import {Watchlist} from './components/Watchlist'
 import './App.css';
+import { GlobalProvider } from "./context/GlobalContext";
 
 function App() {
   return (
-    <Router>
-
+    <GlobalProvider>
+      <Router>
+        
         <Header />
 
         <Switch>
-
           <Route exact path="/">
             <Movies />
           </Route>
@@ -29,10 +30,9 @@ function App() {
           <Route path="/watchlist">
             <Watchlist />
           </Route>
-          
         </Switch>
-
       </Router>
+    </GlobalProvider>
   );
 }
 

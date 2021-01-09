@@ -2,11 +2,13 @@ import React, {useState, useEffect} from 'react'
 import {FaSistrix} from 'react-icons/fa'
 import { ResultCard } from './ResultCard';
 
+
 export const Movies = () => {
     
     const [query, setQuery] = useState("")
     const [results, setResults] = useState([])
     const [count, setCount] = useState(2)
+    
 
     async function fetchData(count){
         let response = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=${count}&include_adult=false`)

@@ -1,11 +1,16 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {FaFilm} from 'react-icons/fa'
 
 export const Header = () => {
     return (
-      <div>
         <div className="header">
           <div className="inner-header">
+            <Link to="/">
+              <div className="cinema-icon">
+                  <FaFilm/>
+              </div>
+            </Link>
             <div className="brand">
               <Link to="/">Cinema Archive</Link>
             </div>
@@ -23,7 +28,7 @@ export const Header = () => {
               
             </div>
           </div>
+          
         </div>
-      </div>
     );
 }
