@@ -59,7 +59,7 @@ export const Movies = () => {
                 <div className="inner-container">
                     {results.map(movie => (
                         
-                        <ResultCard result={movie} key={movie.id}/>
+                        <ResultCard result={movie} id={movie.id}/>
                         
                     ))}
                 </div>

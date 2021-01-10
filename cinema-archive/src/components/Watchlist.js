@@ -13,7 +13,7 @@ export const Watchlist = () => {
                 <div className="inner-container">
                     {watchlist.map(result => (
                         
-                        <WatchlistCard result={result} key={result.id}/>
+                        <WatchlistCard result={result} id={result.id}/>
                         
                     ))}
                 </div>
