@@ -223,3 +223,11 @@ body {
   opacity: 100%;
   cursor: pointer;
 }
+
+
+.no-movies {
+  width: 35.5%;
+  margin: 0 auto;
+  color: rgb(145, 136, 136);
+  opacity: 70%;
+}

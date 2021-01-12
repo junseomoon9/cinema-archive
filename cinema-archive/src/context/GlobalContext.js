@@ -1,8 +1,8 @@
-import React, {createContext, useReducer} from 'react'
+import React, {createContext, useReducer, useEffect} from 'react'
 import AppReducer from "./AppReducer";
 
 const initialState = {
-    watchlist: []
+    watchlist: localStorage.getItem('watchlist') ? JSON.parse(localStorage.getItem('watchlist')) : []
 };
 
 export const GlobalContext = createContext(initialState);
@@ -10,6 +10,11 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = props => {
 
     const [state, dispatch] = useReducer(AppReducer, initialState);
+
+    useEffect(() => {
+        localStorage.setItem('watchlist', JSON.stringify(state.watchlist))
+        localStorage.setItem('watched', JSON.stringify(state.watched))
+    }, [state])
 
     // actions
     const addMovieToWatchlist = media => {

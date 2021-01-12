@@ -7,17 +7,22 @@ export const Watchlist = () => {
     const {watchlist} = useContext(GlobalContext)
 
     return (
-        <div>
-            <h1 className="watchlist-title"> Your Watchlist</h1>
-            <div className="container">
-                <div className="inner-container">
-                    {watchlist.map(result => (
-                        
-                        <WatchlistCard result={result} id={result.id}/>
-                        
-                    ))}
-                </div>
-            </div>
+      <div>
+        <h1 className="watchlist-title"> Your Watchlist</h1>
+        <div className="container">
+            
+
+            {watchlist.length > 0 ? (
+              <div className="inner-container">
+              {watchlist.map((result) => (
+                <WatchlistCard result={result} id={result.id} />
+              ))}
+              </div>
+            ) : (
+              <h2 className="no-movies">No movies in your list, add some!</h2>
+            )}
+          
         </div>
-    )
+      </div>
+    );
 }
