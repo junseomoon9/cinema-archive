@@ -4,6 +4,7 @@ import {Header} from './components/Header'
 import {Movies} from './components/Movies'
 import {TVshows} from './components/TVshows'
 import {Watchlist} from './components/Watchlist'
+import {Footer} from './components/Footer'
 import './App.css';
 import { GlobalProvider } from "./context/GlobalContext";
 
@@ -31,6 +32,8 @@ function App() {
             <Watchlist />
           </Route>
         </Switch>
+
+        <Footer />
       </Router>
     </GlobalProvider>
   );

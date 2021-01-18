@@ -7,7 +7,7 @@ export const Watchlist = () => {
     const {watchlist} = useContext(GlobalContext)
 
     return (
-      <div>
+      <div className="watchlist">
         <h1 className="watchlist-title"> Your Watchlist</h1>
         <div className="container">
             

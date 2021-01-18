@@ -167,6 +167,10 @@ body {
   padding: 2px;
 }
 
+.watchlist {
+  min-height: 60vh;
+}
+
 .watchlist-title {
   display: flex;
   justify-content: space-around;
@@ -231,3 +235,29 @@ body {
   color: rgb(145, 136, 136);
   opacity: 70%;
 }
+
+.footer {
+  
+  background-image: linear-gradient(to right, #fa709a 0%, #ee9139 100%);
+  height: 25vh;
+  display: flex;
+  align-items: center;
+}
+
+.inner-footer-content {
+  display: flex;
+  width: 80vw;
+  margin: 0 auto;
+  align-items: center;
+  
+}
+
+.inner-footer-content h3{
+  flex: 1;
+}
+
+
+.moviedb-logo {
+  width: 20%;
+}
+
