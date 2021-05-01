@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import {FaFilm} from 'react-icons/fa'
+import {FaFilm} from 'react-icons/fa';
+import {FaBars} from 'react-icons/fa';
+import {DropdownMenu} from './DropdownMenu'
 
 export const Header = () => {
+
+    const [ClickedDropdown, SetClickedDropdown] = useState(false);
+
     return (
         <div className="header">
           <div className="inner-header">
@@ -27,6 +32,16 @@ export const Header = () => {
                 </li>
               
             </div>
+
+            <div className="dropdown">
+                <div className="dropdown-icon">
+                    <FaBars onClick={() => SetClickedDropdown(true)}/>
+                </div>
+            </div>
+
+            <DropdownMenu trigger={ClickedDropdown} setTrigger={SetClickedDropdown}/>
+              
+            
           </div>
           
         </div>

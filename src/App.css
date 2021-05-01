@@ -44,6 +44,16 @@ body {
   display: flex;
   width: 20vw;
   justify-content: space-between;
+
+  
+}
+
+@media screen and (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+  }
+  
 }
 
 .nav-links li {
@@ -212,6 +222,7 @@ body {
   color: white;
   font-weight: 200;
   border: none;
+  z-index: 5;
 }
 
 .movie-card button:hover {
@@ -261,3 +272,76 @@ body {
   width: 20%;
 }
 
+@media screen and (min-width: 769px) {
+
+  .dropdown {
+    display: none;
+  }
+  
+}
+
+.dropdown-icon {
+  margin-top: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.dropdown-icon :hover{
+  
+  color: rgb(112, 109, 109);
+}
+
+.dropdown-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to right, #fa709a 0%, #ee9139 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-close-icon {
+  position: fixed;
+  top: 3.5%;
+  right: 13%;
+  height: 9vh;
+  width: 5%;
+  
+}
+
+.dropdown-close-icon :hover{
+  color:rgb(145, 136, 136);
+  cursor: pointer;
+}
+
+.dropdown-menu-container{
+  width: 300px;
+  height: 50vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-links li {
+  font-size: 2rem;
+  margin: 10px auto;
+  text-decoration: none;
+  list-style: none;
+  
+}
+
+.dropdown-links li :hover {
+  color:rgb(145, 136, 136);
+}
